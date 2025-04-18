@@ -1,0 +1,18 @@
+<resources>
+    <!-- common -->
+    <string name="ok">OK</string>
+    <string name="cancel">キャンセル</string>
+    <string name="clear">クリア</string>
+    <string name="reset">リセット</string>
+
+    <!-- main -->
+    <string name="app_name">撃退君</string>
+    <string name="web_view">ウェブビュー</string>
+    <string name="progress_bar">進捗バー</string>
+    <string name="now_starting">撃退君を起動中…</string>
+    <string name="needs_vibe">このアプリがバイブレーターにアクセスするためには権限が必要です。</string>
+    <string name="cant_use_vibe">このアプリは権限なしにバイブレーターを使うことはできません。</string>
+
+    <!-- URLs -->
+    <string name="url">file:///android_asset/index.html</string>
+</resources>

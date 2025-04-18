@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 【HTMLヘッダー】ここから -->
+<head prefix="og: http://ogp.me/ns#">
+	<!-- 【HTMLヘッダーの主要な設定】ここから -->
+	<meta charset="UTF-8" />
+	<title>痴漢撃退アプリ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="痴漢撃退アプリ,Webアプリ,ウェブアプリ,katahiromz" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<!-- 【HTMLヘッダーの主要な設定】ここまで -->
+	<!-- 【HTMLヘッダーの外部スクリプト読み込み】ここから -->
+	<script defer src="main.js" delay></script>
+	<!-- 【HTMLヘッダーの外部スクリプト読み込み】ここまで -->
+	<!-- 【HTMLヘッダーのその他の設定】ここから -->
+	<link rel="icon" href="icons/icon-256.png" />
+	<link rel="manifest" href="manifest.json" />
+	<meta name="theme-color" content="#FFFF00" />
+	<link rel="apple-touch-icon" href="https:./icons/apple-touch-icon.png" />
+	<!-- 【HTMLヘッダーのその他の設定】ここまで -->
+	<!-- 【Open Graph Protocol】ここから -->
+	<meta property="og:title" content="痴漢撃退アプリ" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://katahiromz.github.io/gekitai/" />
+	<meta property="og:image" content="https://katahiromz.github.io/gekitai/icons/icon-192.png" />
+	<meta property="og:site_name" content="痴漢撃退アプリ" />
+	<meta property="og:description" content="痴漢被害を知らせるアプリ" />
+	<meta name="twitter:card" content="summary" />
+	<!-- 【Open Graph Protocol】ここまで -->
+</head>
+<!-- 【HTMLヘッダー】ここまで -->
+<body>
+<!-- 【ページ群を納めるdivタグ】ここから -->
+<div id="geki_class_pages">
+	<!-- 【メインページ】ここから -->
+	<div id="geki_id_page_main" class="geki_class_page">
+		<!-- 【メインページのはてなボタン】ここから -->
+		<button type="button" id="geki_id_button_about" class="geki_class_rounded_button geki_class_button_main_control">
+			<img id="geki_id_img_question" src="img/question.svg" alt="[?]" loading="lazy" />
+		</button>
+		<!-- 【メインページのはてなボタン】ここまで -->
+		<!-- 【メインページのタイトル】ここから -->
+		<div id="geki_id_text_title">
+			<span class="geki_class_nobr">痴漢撃退</span>
+			<span class="geki_class_nobr">アプリ</span>
+			<span class="geki_class_nobr">【撃退君】</span>
+		</div>
+		<!-- 【メインページのタイトル】ここまで -->
+
+		<!-- 【メインページの痴漢撃退ボタン】ここから -->
+		<button type="button" id="geki_id_button_gekitai" class="geki_class_button_main_control">
+			<span class="geki_class_nobr">
+				!痴漢!
+			</span>
+			<span class="geki_class_nobr">
+				!撃退!
+			</span>
+			<span class="geki_class_nobr">
+				PUSH
+			</span>
+		</button>
+		<!-- 【メインページの痴漢撃退ボタン】ここまで -->
+		<!-- 【メインページの痴漢撃退ボタンの説明テキスト】ここから -->
+		<div id="geki_id_text_button_notice">
+			<span class="geki_class_nobr">この</span>
+			<span class="geki_class_nobr">ボタンを</span>
+			<span class="geki_class_nobr">押すと</span>
+			<span class="geki_class_nobr">警報が</span>
+			<span class="geki_class_nobr">鳴ります。</span>
+		</div>
+		<!-- 【メインページの痴漢撃退ボタンの説明テキスト】ここまで -->
+	</div>
+	<!-- 【メインページ】ここまで -->
+	<!-- 【警報ページ】ここから -->
+	<div id="geki_id_page_alert" class="geki_class_page geki_class_invisible">
+		<!-- 【撃退ページの戻るボタン】ここから -->
+		<button type="button" id="geki_id_button_gekitai_back" class="geki_class_rounded_button">
+			<img src="img/back.svg" alt="[back]" loading="lazy" />
+		</button>
+		<!-- 【撃退ページの戻るボタン】ここまで -->
+		<!-- 【撃退ページの浮遊するテキスト1】ここから -->
+		<div id="geki_id_text_floating_1" class="geki_class_floating_text geki_class_text_message geki_class_invisible">
+			<span class="geki_class_nobr">痴漢です。</span>
+			<span class="geki_class_nobr">助けて、</span>
+			<span class="geki_class_nobr">HELP!</span>
+		</div>
+		<!-- 【撃退ページの浮遊するテキスト1】ここまで -->
+	</div>
+	<!-- 【警報ページ】ここまで -->
+	<!-- 【設定ページ】ここから -->
+	<div id="geki_id_page_config" class="geki_class_page geki_class_invisible">
+		設定ページです。
+	</div>
+	<!-- 【設定ページ】ここまで -->
+	<!-- 【同意ページ】ここから -->
+	<div id="geki_id_page_agreement" class="geki_class_page geki_class_invisible">
+		<!-- 【同意ページの戻るボタン】ここから -->
+		<button type="button" id="geki_id_button_agreement_back" class="geki_class_rounded_button">
+			<img src="img/back.svg" alt="[back]" loading="lazy" />
+		</button>
+		<!-- 【同意ページの戻るボタン】ここまで -->
+		<div id="geki_id_text_version_title">
+			<div>
+				<span class="geki_class_nobr">痴漢撃退</span>
+				<span class="geki_class_nobr">アプリ</span>
+				<span id="geki_id_text_version">撃退君</span>
+			</div>
+		</div>
+		<img id="geki_id_img_alert_light" src="img/poli-light.png" alt="" />
+		<button id="geki_id_button_agree_ok">OK</button>
+		<div id="geki_id_text_copyright">
+			<span class="geki_class_nobr">Copyright &copy; 2025 katahiromz.</span>
+			<span class="geki_class_nobr">OtoLogicの音声使用.</span>
+		</div>
+	</div>
+	<!-- 【同意ページ】ここまで -->
+</div>
+<!-- 【ページ群を納めるdivタグ】ここまで -->
+</body></html>

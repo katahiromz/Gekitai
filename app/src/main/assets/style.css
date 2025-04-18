@@ -1,0 +1,233 @@
+/* Gekitai共通CSSファイル。*/
+* { /* すべての要素 */
+	/* いったん、すべての要素をスクロール不能にする。スクロールしたいものは個別に指定する。 */
+	overflow: hidden;
+	/* いったん、すべての要素を選択不可にする。選択したいものは個別に指定する。 */
+	user-select: none;
+}
+body { /* ボディ */
+	margin: 0;
+	padding: 0;
+	background-color: yellow;
+}
+input[type='checkbox'] { /* チェックボックス */
+	cursor: pointer;
+}
+label { /* ラベル */
+	cursor: pointer;
+}
+button {
+	background-color: #AAAAAA;
+	background: linear-gradient(to bottom, gray, white, gray);
+}
+button:active {
+	/* ボタンを押したとき */
+	transform: translateY(1mm); /* 下に動く */
+}
+.geki_class_page { /* ページ */
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	width: 100dvw;
+	height: 100vh;
+	height: 100dvh;
+}
+#geki_id_page_main { /* メインページ */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	width: 100dvw;
+	height: 100vh;
+	height: 100dvh;
+	background-image: url(img/bg.png);
+}
+#geki_id_page_agreement { /* 同意ページ */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	width: 100dvw;
+	height: 100vh;
+	height: 100dvh;
+	background-image: url(img/bg.png);
+}
+#geki_id_button_gekitai { /* 痴漢撃退ボタン */
+	position: absolute;
+	width: 60vw;
+	width: 60dvw;
+	height: 40vh;
+	height: 40dvh;
+	left: calc((100vw - 60vw) / 2);
+	left: calc((100dvw - 60dvw) / 2);
+	top: calc((100vh - 40vh) / 2);
+	top: calc((100dvh - 40dvh) / 2);
+	font-size: calc((8vw + 8vh) / 2);
+	font-size: calc((8dvw + 8dvh) / 2);
+	border-radius: 2vw;
+	color: #FFFFFF;
+	background-color: #FF0000;
+	background: linear-gradient(to bottom, red, black, red);
+	font-weight: bold;
+	border: 1vw red solid;
+	box-shadow: inset 1vw 1vw 0 rgba(255,255,255,0.4), inset -1vw -1vw 0 rgba(0, 0, 0, 0.4);
+}
+#geki_id_button_gekitai:hover { /* 痴漢撃退ボタンの上 */
+	background-color: #FF9999;
+}
+#geki_id_button_gekitai:active { /* 痴漢撃退ボタンを押したとき */
+	background-color: #FF7777;
+}
+#geki_id_text_title { /* タイトルテキスト */
+	position: absolute;
+	width: 80vw;
+	width: 80dvw;
+	left: calc((100vw - 80vw) / 2);
+	left: calc((100dvw - 80dvw) / 2);
+	top: calc(11vh);
+	top: calc(11dvh);
+	font-size: calc((6vw + 6vh) / 2);
+	font-size: calc((6dvw + 6dvh) / 2);
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(255, 255, 0, 0.85);
+	flex: 0 1 auto;
+}
+#geki_id_text_version_title { /* アプリ名 */
+	position: absolute;
+	width: 50vw;
+	width: 50dvw;
+	left: calc((100vw - 50vw) / 2);
+	left: calc((100dvw - 50dvw) / 2);
+	top: calc(5vh);
+	top: calc(5dvh);
+	font-size: calc((6vw + 6vh) / 2);
+	font-size: calc((6dvw + 6dvh) / 2);
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(255, 255, 0, 0.85);
+	flex: 0 1 auto;
+}
+#geki_id_img_alert_light { /* 回転灯 */
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: calc((20vw + 20vh) / 2);
+	min-width: calc((20dvw + 20dvh) / 2);
+}
+#geki_id_text_button_notice { /* 痴漢撃退ボタンの説明テキスト */
+	position: absolute;
+	width: 80vw;
+	width: 80dvw;
+	left: calc((100vw - 80vw) / 2);
+	left: calc((100dvw - 80dvw) / 2);
+	top: calc(80vh);
+	top: calc(80dvh);
+	font-size: calc((4vw + 4vh) / 2);
+	font-size: calc((4dvw + 4dvh) / 2);
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(255, 255, 0, 0.85);
+	flex: 0 1 auto;
+}
+#geki_id_button_agree_ok { /* 同意ページのOKボタン */
+	position: absolute;
+	width: 40vw;
+	width: 40dvw;
+	min-height: 12vh;
+	min-height: 12dvh;
+	max-height: 15vh;
+	max-height: 15dvh;
+	left: calc((100vw - 40vw) / 2);
+	left: calc((100dvw - 40dvw) / 2);
+	top: calc(80vh);
+	top: calc(80dvh);
+	font-size: calc((6vw + 6vh) / 2);
+	font-size: calc((6dvw + 6dvh) / 2);
+	font-weight: bold;
+	text-align: center;
+	border: 2px black solid;
+	border-radius: 5%;
+	padding: 0;
+	margin: 0;
+	box-shadow: inset 1vw 1vw 0 rgba(255,255,255,0.4), 1vw 1vw 1vw rgba(0, 0, 0, 0.4);
+}
+.geki_class_rounded_button { /* 丸いボタン */
+	border: 0;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0;
+}
+.geki_class_rounded_button img { /* 丸いボタンの画像 */
+	height: max(5vw, 5vh, 1.2cm);
+	height: max(5dvw, 5dvh, 1.2cm);
+}
+#geki_id_button_config { /* メインページの設定ボタン */
+	position: absolute;
+	left: 3px;
+	top: 3px;
+}
+#geki_id_button_agreement_back { /* 同意ページの戻るボタン */
+	position: absolute;
+	left: 3px;
+	top: 3px;
+}
+#geki_id_button_gekitai_back { /* 撃退ページの戻るボタン */
+	position: absolute;
+	left: 3px;
+	top: 3px;
+}
+#geki_id_text_copyright { /* 同意ページの著作権表示 */
+	position: absolute;
+	left: 3px;
+	bottom: 3px;
+	background-color: rgba(255, 255, 255, 80%);
+	pointer-events: none;
+	font-size: min(4vw, 4vh);
+	font-size: min(4dvw, 4dvh);
+}
+#geki_id_button_about { /* はてなボタン */
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+.geki_class_nobr { /* 改行なし */
+	white-space:nowrap;
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+.geki_class_invisible { /* 非表示 */
+	display: none;
+}
+#geki_id_page_alert { /* 撃退ページ */
+	background-image: url(img/poli-light.png);
+}
+#geki_id_text_floating_1 { /* 浮遊するテキスト */
+	position: absolute;
+	z-index: 3;
+	width: 80vw;
+	width: 80dvw;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	font-size: 10vw;
+	font-size: 10dvw;
+	align-items: center;
+	border: 4px solid white;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+}
+@media (orientation: portrait) {
+	#geki_id_text_floating_1 {
+		writing-mode: vertical-rl;
+		text-orientation: upright;
+		width: auto;
+		height: 70vh;
+		height: 70dvh;
+		font-size: 8vh;
+		font-size: 8dvh;
+	}
+}

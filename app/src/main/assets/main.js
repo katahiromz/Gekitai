@@ -284,6 +284,18 @@ const GEKI_main = function(){
 	}
 	// 念のため、音声を停止する。
 	GEKI_speak_cancel();
+	// スマホ・タブレットでのズームを禁止する。
+	document.addEventListener('touchmove', function(e){
+		if(e.scale !== 1){
+			e.preventDefault();
+		}
+	},{ passive: false });
+	// Ctrl+ホイールでのズームを禁止する。
+	document.addEventListener('wheel', function(e){
+		if(e.ctrlKey){
+			e.preventDefault();
+		}
+	},{ passive: false });
 };
 
 // ドキュメントの読み込みが完了（DOMContentLoaded）されたら無名関数が呼び出される。

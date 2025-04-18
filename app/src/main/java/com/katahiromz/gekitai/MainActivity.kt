@@ -269,7 +269,7 @@ class MainActivity : AppCompatActivity(), ValueCallback<String>, TextToSpeech.On
         if (hasVibrator == 1)
             startVibrator(-1)
 
-        // JavaScript側に一時停止を伝える。
+        // JavaScript側に再開を伝える。
         webView?.evaluateJavascript("GEKI_resume()") {}
     }
 

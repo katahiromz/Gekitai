@@ -148,11 +148,20 @@ class MainActivity : AppCompatActivity(), ValueCallback<String>, TextToSpeech.On
     }
 
     // 音声を最大化。
+    private var oldVolume: Int = -1
     fun volumeMaximize() {
         Timber.i("volumeMaximize")
         val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager;
+        if (oldVolume == -1)
+            oldVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
         val musicMaxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, musicMaxVolume, 0)
+    }
+    // 音量を元に戻す。
+    fun volumeRestore() {
+        val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager;
+        if (oldVolume != -1)
+            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, oldVolume, 0)
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
@@ -259,6 +268,9 @@ class MainActivity : AppCompatActivity(), ValueCallback<String>, TextToSpeech.On
         // 振動を再開。
         if (hasVibrator == 1)
             startVibrator(-1)
+
+        // JavaScript側に一時停止を伝える。
+        webView?.evaluateJavascript("GEKI_resume()") {}
     }
 
     // アクティビティの一時停止時。
@@ -275,6 +287,12 @@ class MainActivity : AppCompatActivity(), ValueCallback<String>, TextToSpeech.On
         // 振動を停止。
         if (hasVibrator == 1)
             stopVibrator()
+
+        // 音量を元に戻す。
+        volumeRestore()
+
+        // JavaScript側に一時停止を伝える。
+        webView?.evaluateJavascript("GEKI_pause()") {}
     }
 
     // アクティビティの停止時。
@@ -291,6 +309,9 @@ class MainActivity : AppCompatActivity(), ValueCallback<String>, TextToSpeech.On
         // 振動を停止。
         if (hasVibrator == 1)
             stopVibrator()
+
+        // 音量を元に戻す。
+        volumeRestore()
     }
 
     // アクティビティの破棄時。

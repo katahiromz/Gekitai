@@ -11,8 +11,8 @@ android {
         applicationId = "com.katahiromz.gekitai"
         minSdk = 28
         targetSdk = 34
-        versionCode = 100
-        versionName = "1.0.0"
+        versionCode = 101
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

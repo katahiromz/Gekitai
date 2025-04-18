@@ -1,7 +1,7 @@
 // 痴漢撃退アプリ「警告君」
 // 暗号名はGekitai。
 
-const geki_VERSION = '1.0.0'; // Keikokuバージョン番号。
+const geki_VERSION = '1.0.1'; // Keikokuバージョン番号。
 const geki_APP_NAME = "撃退君"; // アプリの名前
 let geki_alert_audio = new Audio('audio/alert.mp3'); // 警告音。
 let geki_alerting = false; // 警報中か？

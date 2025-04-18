@@ -52,7 +52,7 @@ button:active {
 	height: 100dvh;
 	background-image: url(img/bg.png);
 }
-#geki_id_button_gekitai { /* 痴漢撃退ボタン */
+#geki_id_div_gekitai_button_frame { /* 痴漢撃退ボタンの枠 */
 	position: absolute;
 	width: 60vw;
 	width: 60dvw;
@@ -62,15 +62,39 @@ button:active {
 	left: calc((100dvw - 60dvw) / 2);
 	top: calc((100vh - 40vh) / 2);
 	top: calc((100dvh - 40dvh) / 2);
+	font-weight: bold;
+	background: linear-gradient(to bottom, black, rgb(255, 255, 200), black);
+	border: 3px black solid;
+	border-radius: calc((2vw + 2vh) / 2);
+	border-radius: calc((2dvw + 2dvh) / 2);
+}
+#geki_id_button_gekitai { /* 痴漢撃退ボタン */
+	display: block;
+	width: 90%;
+	height: 90%;
+	margin: auto;
 	font-size: calc((8vw + 8vh) / 2);
 	font-size: calc((8dvw + 8dvh) / 2);
 	border-radius: 2vw;
 	color: #FFFFFF;
 	background-color: #FF0000;
 	background: linear-gradient(to bottom, red, black, red);
-	font-weight: bold;
 	border: 1vw red solid;
 	box-shadow: inset 1vw 1vw 0 rgba(255,255,255,0.4), inset -1vw -1vw 0 rgba(0, 0, 0, 0.4);
+}
+#geki_id_img_screw_1 { /* ねじ1 */
+	position: absolute;
+	width: calc((4vw + 4vh) / 2);
+	height: calc((4vw + 4vh) / 2);
+	left: 0;
+	bottom: 0;
+}
+#geki_id_img_screw_2 { /* ねじ2 */
+	position: absolute;
+	width: calc((4vw + 4vh) / 2);
+	height: calc((4vw + 4vh) / 2);
+	right: 0;
+	bottom: 0;
 }
 #geki_id_button_gekitai:hover { /* 痴漢撃退ボタンの上 */
 	background-color: #FF9999;

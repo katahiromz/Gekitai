@@ -231,7 +231,7 @@ const GEKI_alert = function(do_start = true){
 		geki_alert_audio.currentTime = 0;
 		geki_alert_audio.loop = true;
 		geki_alert_audio.play();
-		GEKI_speak_start("痴漢です。痴漢です。助けて、HELP！ ");
+		GEKI_speak_start("痴漢です。痴漢です。助けてください。HELP！ ");
 		// 浮遊するテキストを表示。
 		geki_id_text_floating_1.classList.remove('geki_class_invisible');
 		// 画面の明るさを最大にする。

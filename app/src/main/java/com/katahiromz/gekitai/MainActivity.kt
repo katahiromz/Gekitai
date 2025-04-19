@@ -537,8 +537,8 @@ class MainActivity : AppCompatActivity(), ValueCallback<String>, TextToSpeech.On
             val params = Bundle()
             speechVoiceVolume = volume.toFloat()
             params.putFloat(TextToSpeech.Engine.KEY_PARAM_VOLUME, speechVoiceVolume)
-            tts?.setPitch(1.0f)
-            tts?.setSpeechRate(2.0f)
+            tts?.setPitch(1.0f) // 音声の高さ。
+            tts?.setSpeechRate(1.8f) // 音声の速さ。
             // {{LANGUAGE_SPECIFIC}}
             tts?.setLanguage(Locale.JAPANESE)
             tts?.speak(text, TextToSpeech.QUEUE_FLUSH, params, "utteranceId")

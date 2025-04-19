@@ -100,7 +100,7 @@ const GEKI_speak_start = function(text, once_only = false){
 				text = text.repeat(32); // 32回繰り返す。
 			const utter = new SpeechSynthesisUtterance(text);
 			utter.pitch = 1.0; // 音声の高さ。
-			utter.rate = 2.0; // 音声の速さ。
+			utter.rate = 1.8; // 音声の速さ。
 			utter.volume = 2.0; // 音量。
 			// {{LANGUAGE_SPECIFIC}}: スピーチの言語をセットする。
 			utter.lang = 'ja-JP';

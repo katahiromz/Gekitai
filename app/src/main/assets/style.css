@@ -69,6 +69,7 @@ button:active {
 	border: 3px black solid;
 	border-radius: calc((2vw + 2vh) / 2);
 	border-radius: calc((2dvw + 2dvh) / 2);
+	box-shadow: 1.5vw 1.5vw 1.5vw 1.5vw rgba(0, 0, 0, 50%);
 }
 #geki_id_button_gekitai { /* 痴漢撃退ボタン */
 	display: block;

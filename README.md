@@ -25,3 +25,4 @@
 ## 著作権表示
 
 - Copyright (c) 2025 katahiromz. All Rights Reserved.
+- OtoLogicの音声使用.

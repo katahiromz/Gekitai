@@ -41,6 +41,7 @@ button:active {
 	height: 100vh;
 	height: 100dvh;
 	background-image: url(img/bg.png);
+	background-size: 10%;
 }
 #geki_id_page_agreement { /* 同意ページ */
 	position: absolute;
@@ -51,6 +52,7 @@ button:active {
 	height: 100vh;
 	height: 100dvh;
 	background-image: url(img/bg.png);
+	background-size: 10%;
 }
 #geki_id_div_gekitai_button_frame { /* 痴漢撃退ボタンの枠 */
 	position: absolute;
@@ -177,6 +179,27 @@ button:active {
 	margin: 0;
 	box-shadow: inset 1vw 1vw 0 rgba(255,255,255,0.4), 1vw 1vw 1vw rgba(0, 0, 0, 0.4);
 }
+#geki_id_button_alert_cancel { /* 警報解除ボタン */
+	position: absolute;
+	width: 38vw;
+	width: 38dvw;
+	min-height: 12vh;
+	min-height: 12dvh;
+	max-height: 15vh;
+	max-height: 15dvh;
+	left: calc((100vw - 38vw) / 2);
+	left: calc((100dvw - 38dvw) / 2);
+	top: calc(83vh);
+	top: calc(83dvh);
+	font-size: calc((5vw + 5vh) / 2);
+	font-size: calc((5dvw + 5dvh) / 2);
+	font-weight: bold;
+	text-align: center;
+	border: 2px black solid;
+	border-radius: 5%;
+	padding: 0;
+	margin: 0;
+}
 .geki_class_rounded_button { /* 丸いボタン */
 	border: 0;
 	border-radius: 100%;
@@ -217,7 +240,7 @@ button:active {
 	top: 3px;
 }
 .geki_class_nobr { /* 改行なし */
-	white-space:nowrap;
+	white-space: nowrap;
 	-webkit-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
@@ -226,31 +249,33 @@ button:active {
 	display: none;
 }
 #geki_id_page_alert { /* 撃退ページ */
-	background-image: url(img/poli-light.png);
+	background-image: url(img/red-light.png);
+	background-position: 50% 50%;
 }
 #geki_id_text_floating_1 { /* 浮遊するテキスト */
 	position: absolute;
 	z-index: 3;
-	width: 80vw;
-	width: 80dvw;
+	width: 60vw;
+	width: 60dvw;
 	left: 50%;
 	top: 50%;
 	text-align: center;
-	font-size: 10vw;
-	font-size: 10dvw;
+	font-size: 7vw;
+	font-size: 7dvw;
 	align-items: center;
 	border: 4px solid white;
 	background-color: red;
 	color: white;
 	font-weight: bold;
+	pointer-events: none;
 }
 @media (orientation: portrait) {
 	#geki_id_text_floating_1 {
 		writing-mode: vertical-rl;
 		text-orientation: upright;
 		width: auto;
-		height: 70vh;
-		height: 70dvh;
+		height: 50vh;
+		height: 50dvh;
 		font-size: 8vh;
 		font-size: 8dvh;
 	}

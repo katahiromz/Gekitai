@@ -133,7 +133,7 @@ const GEKI_vibrator_stop = function(strength){
 // メッセージテキストの位置をゆらゆら動かす。
 const GEKI_message_set_position = function(id, counter){
 	// 上下に揺らす。
-	let top = 50 + Math.sin(counter * 0.01) * 10;
+	let top = 50 + Math.sin(counter * 0.01) * 8;
 	id.style.transform = `translate(-50%, -${top}%)`;
 	// ついでに色も変える。
 	let color = ((counter % 1000) < 500) ? 'yellow' : 'white';
@@ -175,11 +175,6 @@ const GEKI_register_event_listeners = function(){
 		// 画面遷移。
 		GEKI_choose_page(geki_id_page_alert);
 	});
-	// 警報ページ。
-	geki_id_page_alert.addEventListener('click', function(e){
-		// 画面遷移。
-		GEKI_choose_page(geki_id_page_main);
-	});
 	// 同意ページの戻るボタン。
 	geki_id_button_agreement_back.addEventListener('click', function(e){
 		// 画面遷移。
@@ -192,6 +187,11 @@ const GEKI_register_event_listeners = function(){
 	});
 	// 撃退ページの戻るボタン。
 	geki_id_button_gekitai_back.addEventListener('click', function(e){
+		// 画面遷移。
+		GEKI_choose_page(geki_id_page_main);
+	});
+	// 警報ページの解除ボタン。
+	geki_id_button_alert_cancel.addEventListener('click', function(e){
 		// 画面遷移。
 		GEKI_choose_page(geki_id_page_main);
 	});

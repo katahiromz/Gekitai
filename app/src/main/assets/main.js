@@ -5,7 +5,7 @@ const geki_VERSION = '1.0.1'; // Keikokuバージョン番号。
 const geki_APP_NAME = "撃退君"; // アプリの名前
 let geki_alert_audio = new Audio('audio/alert.mp3'); // 警告音。
 let geki_alerting = false; // 警報中か？
-let geki_timer = null; // タイマー。
+let geki_request_anime = null; // アニメーション要求。
 
 // 【Gekitai JavaScript 命名規則】
 // - 関数名の頭に GEKI_ を付ける。
@@ -213,6 +213,14 @@ const GEKI_load_version_info = function(){
 		pre_span + GEKI_htmlspecialchars(geki_VERSION) + post_span;
 };
 
+// アニメーションを実行するコールバック関数。
+const GEKI_anime_callback = function(timestamp){
+	GEKI_message_set_position(geki_id_text_floating_1, timestamp);
+	// 必要ならアニメーションを要求する。
+	if(geki_request_anime)
+		geki_request_anime = window.requestAnimationFrame(GEKI_anime_callback);
+};
+
 // 警報を鳴らす。
 const GEKI_alert = function(do_start = true){
 	if(do_start){
@@ -226,16 +234,22 @@ const GEKI_alert = function(do_start = true){
 		GEKI_speak_start("痴漢です。痴漢です。助けて、HELP！ ");
 		// 浮遊するテキストを表示。
 		geki_id_text_floating_1.classList.remove('geki_class_invisible');
-		geki_timer = setInterval(function(){
-			GEKI_message_set_position(geki_id_text_floating_1, (new Date()).getTime());
-		}, 20);
 		// 画面の明るさを最大にする。
 		GEKI_brightness_set(true);
 		// 振動を開始する。
 		GEKI_vibrator_start(5);
 		// 警報中かどうかをセットする。
 		GEKI_setAlerming('yes');
+		// 必要ならアニメーションを要求する。
+		if(!geki_request_anime){
+			geki_request_anime = window.requestAnimationFrame(GEKI_anime_callback);
+		}
 	}else{
+		// アニメーションをキャンセルする。
+		if(geki_request_anime){
+			window.cancelAnimationFrame(geki_request_anime);
+			geki_request_anime = null;
+		}
 		// 警報中かどうかをセットする。
 		GEKI_setAlerming('no');
 		// 音声を停止する。
@@ -243,8 +257,6 @@ const GEKI_alert = function(do_start = true){
 		GEKI_speak_cancel();
 		// 浮遊するテキストを非表示。
 		geki_id_text_floating_1.classList.add('geki_class_invisible');
-		clearInterval(geki_timer);
-		geki_timer = null;
 		// 画面の明るさを元に戻す。
 		GEKI_brightness_set(false);
 		// 振動を停止する。

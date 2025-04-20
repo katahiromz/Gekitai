@@ -246,6 +246,9 @@ button:active {
 	-ms-hyphens: none;
 	hyphens: none;
 }
+.geki_zero_width_space { /* ゼロ幅空白 */
+	font-size: 0;
+}
 .geki_class_invisible { /* 非表示 */
 	display: none;
 }

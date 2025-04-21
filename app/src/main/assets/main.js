@@ -117,7 +117,7 @@ const GEKI_vibrator_start = function(strength){
 		android.startVibrator(strength.toString());
 	}catch(error){ // Androidではない。
 		if('vibrate' in navigator){
-			navigator.vibrate(0); // 振動を停止。
+			navigator.vibrate([0]); // 振動を停止。
 			if(strength > 0){
 				navigator.vibrate([20 * 60 * 1000]); // 20分間振動。
 			}
@@ -132,7 +132,7 @@ const GEKI_vibrator_stop = function(strength){
 		android.stopVibrator();
 	}catch(error){ // Androidではない。
 		if('vibrate' in navigator){
-			navigator.vibrate(0); // 振動を停止。
+			navigator.vibrate([0]); // 振動を停止。
 		}
 	}
 };

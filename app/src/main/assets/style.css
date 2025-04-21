@@ -246,12 +246,6 @@ button:active {
 	-ms-hyphens: none;
 	hyphens: none;
 }
-.geki_zero_width_space { /* ゼロ幅空白 */
-	font-size: 0;
-}
-.geki_class_invisible { /* 非表示 */
-	display: none;
-}
 #geki_id_page_alert { /* 撃退ページ */
 	background-image: url(img/red-light.png);
 	background-position: 50% 50%;

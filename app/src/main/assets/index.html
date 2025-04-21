@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="keywords" content="痴漢撃退アプリ,Webアプリ,ウェブアプリ,katahiromz" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="preload" href="img/bg.png" as="image" /><!-- 背景画像を先読みする。 -->
 	<!-- 【HTMLヘッダーの主要な設定】ここまで -->
 	<!-- 【HTMLヘッダーの外部スクリプト読み込み】ここから -->
 	<script defer src="main.js" delay></script>
@@ -31,6 +32,15 @@
 	<meta property="og:description" content="痴漢被害を知らせるアプリ" />
 	<meta name="twitter:card" content="summary" />
 	<!-- 【Open Graph Protocol】ここまで -->
+	<!-- クリティカルCSSのインライン化 -->
+	<style>
+		.geki_class_invisible { /* 非表示 */
+			display: none; 
+		}
+		.geki_zero_width_space { /* ゼロ幅空白 */
+			font-size: 0;
+		}
+	</style>
 </head>
 <!-- 【HTMLヘッダー】ここまで -->
 <body oncontextmenu="return false;"><!-- 右クリックメニュー禁止 -->
@@ -53,7 +63,7 @@
 		<!-- 【メインページの痴漢撃退ボタンの枠】ここから -->
 		<div id="geki_id_div_gekitai_button_frame">
 			<!-- 【メインページの痴漢撃退ボタン】ここから -->
-			<button type="button" id="geki_id_button_gekitai" class="geki_class_button_main_control">
+			<button type="button" id="geki_id_button_gekitai" class="geki_class_button_main_control" aria-label="痴漢撃退ボタン">
 				<span class="geki_class_nobr">
 					!痴漢!
 				</span>
@@ -65,8 +75,8 @@
 				</span>
 			</button>
 			<!-- 【メインページの痴漢撃退ボタン】ここまで -->
-			<img id="geki_id_img_screw_1" src="img/screw.png" />
-			<img id="geki_id_img_screw_2" src="img/screw.png" />
+			<img id="geki_id_img_screw_1" src="img/screw.png" alt="" />
+			<img id="geki_id_img_screw_2" src="img/screw.png" alt="" />
 		</div>
 		<!-- 【メインページの痴漢撃退ボタンの枠】ここまで -->
 		<!-- 【メインページの痴漢撃退ボタンの説明テキスト】ここから -->

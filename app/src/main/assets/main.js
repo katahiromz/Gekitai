@@ -111,22 +111,19 @@ const GEKI_speak_start = function(text, once_only = false){
 };
 
 // 振動を開始する。
-const GEKI_vibrator_start = function(strength){
+const GEKI_vibrator_start = function(length){
 	console.log('GEKI_vibrator_start');
 	try{
-		android.startVibrator(strength.toString());
+		android.startVibrator(length.toString());
 	}catch(error){ // Androidではない。
 		if('vibrate' in navigator){
-			navigator.vibrate([0]); // 振動を停止。
-			if(strength > 0){
-				navigator.vibrate([20 * 60 * 1000]); // 20分間振動。
-			}
+			navigator.vibrate([length]); // 振動。
 		}
 	}
 };
 
 // 振動を停止する。
-const GEKI_vibrator_stop = function(strength){
+const GEKI_vibrator_stop = function(){
 	console.log('GEKI_vibrator_stop');
 	try{
 		android.stopVibrator();
@@ -243,8 +240,8 @@ const GEKI_alert = function(do_start = true){
 		geki_id_text_floating_1.classList.remove('geki_class_invisible');
 		// 画面の明るさを最大にする。
 		GEKI_brightness_set(true);
-		// 振動を開始する。
-		GEKI_vibrator_start(5);
+		// 20分間の振動を開始する。
+		GEKI_vibrator_start(20 * 60 * 1000);
 		// 警報中かどうかをセットする。
 		GEKI_setAlerming('yes');
 		// 必要ならアニメーションを要求する。

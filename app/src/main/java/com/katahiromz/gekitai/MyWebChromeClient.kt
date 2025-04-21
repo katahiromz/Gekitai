@@ -29,7 +29,7 @@ class MyWebChromeClient(private var activity: MainActivity?, private val listene
         fun onBrightness(value: String)
         fun onVolumeMaximize()
         fun onAlerming(value: String);
-        fun onStartVibrator(strength: Int)
+        fun onStartVibrator(length: Int)
         fun onStopVibrator()
     }
 
@@ -97,8 +97,8 @@ class MyWebChromeClient(private var activity: MainActivity?, private val listene
 
     // 振動を開始する。
     @JavascriptInterface
-    fun startVibrator(strength: String) {
-        listener.onStartVibrator(strength.toInt())
+    fun startVibrator(length: String) {
+        listener.onStartVibrator(length.toInt())
     }
 
     // 振動を停止する。

@@ -20,11 +20,16 @@ let geki_request_anime = null; // アニメーション要求。
 
 // このアプリはAndroidアプリか？
 const GEKI_is_android_app = function(){
+	return navigator.userAgent.indexOf('Android') != -1;
+};
+
+// このアプリはAndroidネイティブアプリか？
+const GEKI_is_android_native_app = function(){
 	return navigator.userAgent.indexOf('/Keikoku-android-app/') != -1;
 };
 
-// Androidアプリならバージョン番号を取得する。
-const GEKI_get_android_app_version = function(){
+// Androidネイティブアプリならバージョン番号を取得する。
+const GEKI_get_android_native_app_version = function(){
 	let results = navigator.userAgent.match(/\/Keikoku-android-app\/([\d\.]+)\//);
 	if(results)
 		return results[1];
@@ -292,7 +297,7 @@ const GEKI_main = function(){
 	// イベントリスナー群を登録する。
 	GEKI_register_event_listeners();
 	// AndroidアプリでなければAndroidオンリーの要素を隠す。
-	if(!GEKI_is_android_app()){
+	if(!GEKI_is_android_native_app()){
 		let items = document.getElementsByClassName('geki_class_android_app_only');
 		for(let item of items){
 			item.classList.add('geki_class_invisible');

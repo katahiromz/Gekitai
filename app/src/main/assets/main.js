@@ -240,8 +240,8 @@ const GEKI_alert = function(do_start = true){
 		geki_id_text_floating_1.classList.remove('geki_class_invisible');
 		// 画面の明るさを最大にする。
 		GEKI_brightness_set(true);
-		// 20分間の振動を開始する。
-		GEKI_vibrator_start(20 * 60 * 1000);
+		// 0.5秒の振動を開始する。
+		GEKI_vibrator_start(500);
 		// 警報中かどうかをセットする。
 		GEKI_setAlerming('yes');
 		// 必要ならアニメーションを要求する。
